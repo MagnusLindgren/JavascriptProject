@@ -19,7 +19,7 @@ html {
     letter-spacing: -2px;
 }
 
-#button{
+.button{
     position: relative;
     top: 200px;
     height: 55px;
