@@ -1,6 +1,37 @@
-* {
+*{
     padding: 0%;
     margin: 0%;
+}
+
+html {
+height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: #2d3436;
+background-image: linear-gradient(315deg, #250909 0%, #000000 74%);
+}
+
+.header {
+    position: relative;
+    top: -55px;
+    padding: 10px;
+    width: 100%;
+    font-family: Georgia, sans-serif;
+    font-size: 3em;
+    color: rgb(155, 103, 44);
+    letter-spacing: -2px;
+}
+
+.button{
+    width: 200px;
+    height: 50px;
+    position: relative;
+    top: 130px;
+    border: solid rgb(155, 103, 44) 1px;
+    color: rgb(0, 0, 0);
+    cursor:pointer;
+    transition: all 1s;
 }
 
 body {
@@ -16,4 +47,5 @@ main {
 footer {
     width: 100%;
     text-align: center;
+    color: rgb(155, 103, 44);
 }
