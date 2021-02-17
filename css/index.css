@@ -13,6 +13,10 @@ background-image: linear-gradient(315deg, #250909 0%, #000000 74%);
 }
 
 .header {
+    position: relative;
+    top: -55px;
+    padding: 10px;
+    width: 100%;
     font-family: Georgia, sans-serif;
     font-size: 3em;
     color: rgb(155, 103, 44);
@@ -20,10 +24,14 @@ background-image: linear-gradient(315deg, #250909 0%, #000000 74%);
 }
 
 .button{
+    width: 200px;
+    height: 50px;
     position: relative;
-    top: 200px;
-    height: 55px;
-    width: 150px;
+    top: 130px;
+    border: solid rgb(155, 103, 44) 1px;
+    color: rgb(0, 0, 0);
+    cursor:pointer;
+    transition: all 1s;
 }
 
 body {
@@ -39,4 +47,5 @@ main {
 footer {
     width: 100%;
     text-align: center;
+    color: rgb(155, 103, 44);
 }
