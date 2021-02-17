@@ -9,13 +9,13 @@ display: flex;
 align-items: center;
 justify-content: center;
 background-color: #2d3436;
-background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);
+background-image: linear-gradient(315deg, #240404 0%, #000000 74%);
 }
 
 .header {
     font-family: Georgia, sans-serif;
     font-size: 3em;
-    color: rgba(255, 127, 80, 0.685);
+    color: rgb(155, 103, 44);
     letter-spacing: -2px;
 }
 
