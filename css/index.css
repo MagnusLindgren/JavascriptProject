@@ -4,7 +4,7 @@
 }
 
 html {
-height: 100vh;
+/*height: 100vh;*/
 display: flex;
 align-items: center;
 justify-content: center;
@@ -40,6 +40,11 @@ body {
     min-height: 100vh; 
 }
 
+a {
+    text-decoration: none;
+    color: #FBCA03;
+}
+
 main {
     flex: 1;
 }
@@ -47,5 +52,5 @@ main {
 footer {
     width: 100%;
     text-align: center;
-    color: rgb(155, 103, 44);
+    color: #FBCA03;
 }
