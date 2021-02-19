@@ -5,7 +5,7 @@ let newTime = new Date().getTime();
 let hash = CryptoJS.MD5(newTime + privateKey + publicKey).toString();
 
 function comicUrl() {
-    const url = new URL("http://gateway.marvel.com/v1/public/characters");
+    const url = new URL("https://gateway.marvel.com/v1/public/characters");
     
     url.searchParams.append('ts', newTime);
     url.searchParams.append('apikey', publicKey);
@@ -17,5 +17,7 @@ function comicUrl() {
 }
 
 document.querySelector("#test").onclick = async function() {
-    await fetch(comicUrl()).then(response => console.log(response.json()));
+    const response = await fetch(comicUrl());
+    const data = await response.json();
+    console.log(data);
 }
