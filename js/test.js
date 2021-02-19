@@ -16,7 +16,7 @@ function comicUrl() {
     return url;
 }
 
-document.querySelector("#test").onclick = async function() {
+document.querySelector("#button").onclick = async function() {
     const response = await fetch(comicUrl());
     const data = await response.json();
     console.log(data);
