@@ -1,52 +1,209 @@
-*{
-    padding: 0%;
-    margin: 0%;
-}
-
-html {
-/*height: 100vh;*/
-display: flex;
-align-items: center;
-justify-content: center;
-background-color: #2d3436;
-background-image: linear-gradient(315deg, #250909 0%, #000000 74%);
-}
-
-.header {
-    position: relative;
-    top: -55px;
-    padding: 10px;
-    width: 100%;
-    font-family: Georgia, sans-serif;
-    font-size: 3em;
-    color: rgb(155, 103, 44);
-    letter-spacing: -2px;
-}
-
-.button{
-    width: 200px;
-    height: 50px;
-    position: relative;
-    top: 130px;
-    border: solid rgb(155, 103, 44) 1px;
-    color: rgb(0, 0, 0);
-    cursor:pointer;
-    transition: all 1s;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
+    height: 100vh;
+    background: linear-gradient(to right top, #000000, #8b0000);
+    display: flex; /* Visar lådan */
+    align-items: center;
+    justify-content: center;
+}
+
+h1{
+    color: #000000;
+    font-weight: 600;
+    font-size: 3rem;
+    opacity: 0.8;
+    position: relative;
+    left: 145px;
+}
+
+h2, 
+p {
+    text-align: center;
+    color: #000000;
+    font-weight: 500;
+}
+
+
+
+.glass {
+    height: 80%;
+    background: white;
+    width: 60%;
+    background: linear-gradient(
+        to right bottom,
+        rgba(253, 253, 253, 0.541),
+        rgba(36, 0, 0, 0.438)
+        );
+        border-radius: 2rem; /* Rundar av hörnen på rutan */
+        z-index: 2; /* Pushar stora rutan framått, större nummer ju längre fram kommer den.*/
+        backdrop-filter: blur(1rem); /* Lägger till "blurryness */
+        display: flex; /*Flexar ut mina element ifrån .dashboard*/
+
+}
+
+#button{
+    position: relative;
+    left: 130px;
+    height: 60px;
+    width: 150px;
+    font-size: large;
+    background: linear-gradient(
+        to right bottom,
+        rgba(255, 255, 255, 0.7),
+        rgba(255,255,255,0.3)
+        );
+        border-radius: 1rem;
+        border: none;
+        box-shadow: 6px 6px 10px rgb(0, 0, 0);
+}
+
+.circle1,.circle2,.circle3,.circle4 {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+        to right bottom,
+        rgba(61, 0, 0, 0.3),
+        rgba(255, 145, 42, 0.5)
+        );
+        height: 20rem;
+        width:  20rem;
+        position: absolute; /* Gör så jag kan flytta objektet vart jag vill*/
+        border-radius:50%; /* Gör så att kuberna blir till cirklar*/
+}
+
+.circle1 {
+    top: 5%;
+    right: 15%;
+}
+
+.circle2 {
+    bottom: 3%;
+    left: 12%;
+}
+
+.circle3 {
+    top: 20%;
+    right: 65%;
+    height: 15rem;
+    width: 15rem;
+}
+.circle4 {
+    top: 60%;
+    right: 25%;
+    height: 20rem;
+    width: 20rem;
+}
+
+
+.dashboard {
+    flex: 1;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; 
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    background: linear-gradient(
+        to right bottom,
+        rgba(0, 0, 0, 0.774),
+        rgba(233, 33, 33, 0.144)
+        );
+        border-radius: 2rem;
 }
 
-a {
-    text-decoration: none;
-    color: #FBCA03;
+.link{
+    display: flex;
+    margin: 1rem 0rem;
+    padding: 1rem 5rem;
+    align-items: center;
+    position: relative;
+    top: 230px;
+    left: -75px;
 }
 
-main {
-    flex: 1;
+.link h2 {
+    padding: 0rem 1rem;
+    color: rgb(255, 115, 0);
+}
+
+.pro{
+    background: linear-gradient(to right top, #000000, #8b0000);
+    border: 1rem;
+    position: relative;
+    bottom: 191%
+}
+
+.pro, h2
+{
+    color: rgb(255, 115, 0);
+}
+
+
+/* GAMES */
+
+.status {
+    
+}
+
+.cards {
+    overflow-y: scroll;
+}
+
+.status input  {
+    background: linear-gradient(
+        to right bottom,
+        rgba(255, 255, 255, 0.7),
+        rgba(255,255,255,0.3)
+        );
+        border: none;
+        width: 50%;
+        padding: 1rem;
+        border-radius: 2rem;
+        text-align: center;
+        font-size: large;
+
+        left: 100px;
+        box-shadow: 6px 6px 20px rgb(0, 0, 0);
+        margin-bottom: 30px;
+        
+}
+
+.games {
+    flex: -2;
+    margin: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+
+.card {
+    display: flex;
+    background: -moz-linear-gradient(to left top,
+    rgba(255,255,255,0.2),
+    (rgba(255, 255, 255, 0.5))
+    );
+    border-radius: 1rem;
+    margin: 3rem 3rem;
+    padding: 1rem;
+    box-shadow: 6px 6px 20px rgb(0, 0, 0);
+    justify-content: space-evenly;
+}
+.card img {
+    box-shadow: 6px 6px 90px rgb(0, 0, 0);
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-info, p{
+    color: rgb(255, 115, 0);
 }
 
 footer {
