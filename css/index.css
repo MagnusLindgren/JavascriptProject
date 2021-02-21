@@ -21,9 +21,12 @@ h1{
     left: 145px;
 }
 
+h2{
+    text-align: center;
+}
+
 h2, 
 p {
-    text-align: center;
     color: #000000;
     font-weight: 500;
 }
@@ -31,7 +34,7 @@ p {
 
 
 .glass {
-    height: 80%;
+    height: 90%; /* Hur centrerad området bör vara med relation från top/bot till mitten*/
     background: white;
     width: 60%;
     background: linear-gradient(
@@ -133,7 +136,7 @@ p {
     background: linear-gradient(to right top, #000000, #8b0000);
     border: 1rem;
     position: relative;
-    bottom: 191%
+    bottom: 217% /*Position på välkomnst rutan*/
 }
 
 .pro, h2
@@ -145,11 +148,11 @@ p {
 /* GAMES */
 
 .status {
-    
+    margin-bottom: 3rem;
 }
 
 .cards {
-    overflow-y: scroll;
+    overflow-y: scroll; /*Scrollbar för x antal informationskort.*/
 }
 
 .status input  {
@@ -190,7 +193,7 @@ p {
     margin: 3rem 3rem;
     padding: 1rem;
     box-shadow: 6px 6px 20px rgb(0, 0, 0);
-    justify-content: space-evenly;
+    justify-content: space-between; /*Trycker ut bilderna till vänster och texten till höger center.*/
 }
 .card img {
     box-shadow: 6px 6px 90px rgb(0, 0, 0);
