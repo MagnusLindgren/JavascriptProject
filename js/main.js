@@ -24,3 +24,6 @@ function executeSearch() {
 /* Funktion för att radera sökresultat */
 
 /* Funktion för att spara via localStorage */
+
+/* film, comic och serie för val av checkbox sökning*/
+/* Söka efter hjältar som visar vilka filmer/serietidiningar den är med i. Eventuellt filmer om det finns med i APIN*/
