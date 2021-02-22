@@ -6,14 +6,14 @@ let newTime = new Date().getTime();
 let hash = CryptoJS.MD5(newTime + privateKey + publicKey).toString();
 
 import searchTerm from '../main.js';
-
+console.log(searchTerm, "från main.js");
 function comicUrl() {
     const url = new URL("https://gateway.marvel.com/v1/public/characters");
     
     url.searchParams.append('ts', newTime);
     url.searchParams.append('apikey', publicKey);
     url.searchParams.append('hash', hash);
-    url.searchParams.append('name', "iron man");
+    url.searchParams.append('name', searchTerm);
     
 
     return url;

@@ -132,6 +132,10 @@ p {
     color: rgb(255, 115, 0);
 }
 
+.presslink {
+    color: rgb(255, 115, 0);;
+}
+
 .pro{
     background: linear-gradient(to right top, #000000, #8b0000);
     border: 1rem;

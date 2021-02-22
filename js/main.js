@@ -1,9 +1,20 @@
 "use strict";
 
 /* Sökfunktion */
-const searchWord = document.querySelector('.searchbar');
+const searchBox = document.querySelector('.searchbar');
 
-export let searchTerm = searchWord.value;
+searchBox.addEventListener('keyup', function(e) {
+    e.preventDefault();
+    if (e.keyCode == 13) {
+        //executeSearch();
+        let searchTerm = searchBox.value;
+        console.log(searchBox.value)
+    }
+});
+
+function executeSearch() {
+    console.log("sökt");     
+}
 /* Url byggare */
 
 /* Funktion för att hämta data från API (fetch) */
