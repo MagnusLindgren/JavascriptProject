@@ -13,12 +13,12 @@ body {
 }
 
 h1{
-    color: #000000;
+    color: rgb(255, 115, 0);
     font-weight: 600;
     font-size: 3rem;
     opacity: 0.8;
     position: relative;
-    left: 145px;
+    left: 210px;
 }
 
 h2{
@@ -51,7 +51,7 @@ p {
 
 #button{
     position: relative;
-    left: 130px;
+    left: 50px;
     height: 60px;
     width: 150px;
     font-size: large;
@@ -178,6 +178,21 @@ p {
         
 }
 
+.boxtext {
+    font-size: 35px;
+}
+
+#checkbox1,#checkbox2,#checkbox3 {
+    width: 20px;
+    height: 20px;
+}
+
+.text1,.text2,.text3 {
+    font-size: 25px;
+    color: rgb(255, 115, 0);
+}
+
+
 .games {
     flex: -2;
     margin: 5rem;
@@ -186,7 +201,6 @@ p {
     justify-content: space-evenly;
 
 }
-
 .card {
     display: flex;
     background: -moz-linear-gradient(to left top,
