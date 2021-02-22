@@ -36,7 +36,7 @@ p {
 .glass {
     height: 90%; /* Hur centrerad området bör vara med relation från top/bot till mitten*/
     background: white;
-    width: 60%;
+    width: 85%;
     background: linear-gradient(
         to right bottom,
         rgba(253, 253, 253, 0.541),
@@ -203,6 +203,7 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin: 1em;
 }
 
 .card-info, p{
@@ -210,10 +211,10 @@ p {
 }
 
 footer {
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        background-color: rgba(54, 54, 54, 0.308);
-        text-align: center;
-        }
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(54, 54, 54, 0.308);
+    text-align: center;
+}
