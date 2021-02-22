@@ -36,7 +36,7 @@ p {
 .glass {
     height: 90%; /* Hur centrerad området bör vara med relation från top/bot till mitten*/
     background: white;
-    width: 85%;
+    width: 65%;
     background: linear-gradient(
         to right bottom,
         rgba(253, 253, 253, 0.541),
@@ -133,7 +133,7 @@ p {
 }
 
 .presslink {
-    color: rgb(255, 115, 0);;
+    color: rgb(255, 115, 0);
 }
 
 .pro{
