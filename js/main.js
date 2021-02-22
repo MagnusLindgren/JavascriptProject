@@ -25,5 +25,14 @@ function executeSearch() {
 
 /* Funktion för att spara via localStorage */
 
-/* film, comic och serie för val av checkbox sökning*/
-/* Söka efter hjältar som visar vilka filmer/serietidiningar den är med i. Eventuellt filmer om det finns med i APIN*/
+/*Funktion Superhjältar
+- bild på hjälten
+- information om hjälten
+- skapare */
+
+/* funktion Comics
+- bild serietidningen
+- information om serietidningen
+- skapare */
+
+/* Vid start ifån hemsidan så skall superhjältarna redan vara implementerade i menyn*/
