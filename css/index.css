@@ -42,7 +42,6 @@ p {
         rgba(253, 253, 253, 0.541),
         rgba(36, 0, 0, 0.438)
         );
-        border-radius: 2rem; /* Rundar av hörnen på rutan */
         z-index: 2; /* Pushar stora rutan framått, större nummer ju längre fram kommer den.*/
         backdrop-filter: blur(1rem); /* Lägger till "blurryness */
         display: flex; /*Flexar ut mina element ifrån .dashboard*/
@@ -114,7 +113,6 @@ p {
         rgba(0, 0, 0, 0.774),
         rgba(233, 33, 33, 0.144)
         );
-        border-radius: 2rem;
 }
 
 .link{
@@ -235,4 +233,5 @@ footer {
     width: 100%;
     background-color: rgba(54, 54, 54, 0.308);
     text-align: center;
+    z-index: 100;
 }
