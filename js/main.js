@@ -1,5 +1,6 @@
 "use strict";
-
+export { searchTerm };
+let searchTerm;
 /* Sökfunktion */
 const searchBox = document.querySelector('.searchbar');
 
@@ -7,8 +8,9 @@ searchBox.addEventListener('keyup', function(e) {
     e.preventDefault();
     if (e.keyCode == 13) {
         //executeSearch();
-        let searchTerm = searchBox.value;
-        console.log(searchBox.value)
+        searchTerm = searchBox.value;
+        console.log(searchBox.value);
+        return searchTerm;
     }
 });
 

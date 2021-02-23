@@ -5,11 +5,12 @@
 }
 
 body {
-    height: 100vh;
+    min-height: 100vh;
     background: linear-gradient(to right top, #000000, #8b0000);
     display: flex; /* Visar lådan */
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 h1{
@@ -31,12 +32,14 @@ p {
     font-weight: 500;
 }
 
-
+a {
+    text-decoration: none;
+}
 
 .glass {
     height: 100%; /* Hur centrerad området bör vara med relation från top/bot till mitten*/
     background: white;
-    width: 65%;
+    width: 85%;
     background: linear-gradient(
         to right bottom,
         rgba(253, 253, 253, 0.541),
@@ -45,7 +48,6 @@ p {
         z-index: 2; /* Pushar stora rutan framått, större nummer ju längre fram kommer den.*/
         backdrop-filter: blur(1rem); /* Lägger till "blurryness */
         display: flex; /*Flexar ut mina element ifrån .dashboard*/
-
 }
 
 #button{
@@ -121,7 +123,7 @@ p {
     padding: 1rem 5rem;
     align-items: center;
     position: relative;
-    top: 320px;
+    /*top: 30%;*/
     left: -75px;
 }
 
@@ -154,6 +156,7 @@ p {
 }
 
 .cards {
+    height: 500px;
     overflow-y: scroll; /*Scrollbar för x antal informationskort.*/
 }
 
@@ -164,7 +167,7 @@ p {
         rgba(255,255,255,0.3)
         );
         border: none;
-        width: 50%;
+        width: 80%;
         padding: 1rem;
         border-radius: 2rem;
         text-align: center;
@@ -180,6 +183,12 @@ p {
     font-size: 35px;
 }
 
+.clickbox {
+    display: flex;
+    flex-direction: row;
+    margin: 1em;
+}
+
 #checkbox1,#checkbox2,#checkbox3 {
     width: 20px;
     height: 20px;
@@ -188,6 +197,7 @@ p {
 .text1,.text2,.text3 {
     font-size: 25px;
     color: rgb(255, 115, 0);
+    margin-left: 1em;
 }
 
 
@@ -227,7 +237,9 @@ p {
 }
 
 footer {
-    position: fixed;
+    /* position: fixed; */
+    display: flex;
+    flex-direction: column;
     left: 0;
     bottom: 0;
     width: 100%;

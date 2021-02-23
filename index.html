@@ -18,6 +18,28 @@
 <body>
     <section class="glass"> <!--Parent till Dashboard, user, links, link, pro, games, status, searchbar, button, cards och card-->
       <div class="dashboard">
+        <!-- testing -->
+        <div class="status">
+          <input
+            class="searchbar"
+            type="text"
+            placeholder="Search your hero..."
+          />
+          <p class="boxtext">Select browsing</p>
+          <div class="clickbox">
+            <input id="checkbox1" type="checkbox">
+            <label class="text1" for="checkbox1">Characters</label>
+          </div>
+          <div class="clickbox">
+            <input id="checkbox2" type="checkbox">
+            <label class="text2" for="checkbox2">Comics</label>
+          </div>
+          <div class="clickbox">
+            <input id="checkbox3" type="checkbox">
+            <label class="text3" for="checkbox3">Stories</label>
+          </div>        
+        </div>
+        <!-- end test -->
         <div class="user"></div>
         <div class="links">
           <div class="link">
@@ -52,13 +74,14 @@
               </a>
             </h2>
           </div>
-          <div class="pro">
+          <!-- <div class="pro">
             <h2>Welcome to Magnus & Marcus marvel hero Search!</h2>
-          </div>
+          </div> -->
         </div>
       </div>
       <div class="games"> <!-- Parent för status, searchbar, button och cards/card -->
-        <div class="status"> <!-- Lägg checkboxes i satus eller utanför-->
+     <!--   <div class="status">  Lägg checkboxes i satus eller utanför-->
+          <!-- 
           <p class="boxtext">Select browsing</p>
         <div class="clickbox">
           <input id="checkbox1" type="checkbox">
@@ -79,7 +102,18 @@
             type="text"
             placeholder="Search your hero..."
           />
-          <button id="button" type="submit">Search</button>
+          <button id="button" type="submit">Search</button></div> -->
+        <div class="card">
+            <img src="./img/Wanda-Maximoff.jpg" alt="" style="width: 12rem; height: 12em" />
+
+          <div class="card-info"> <!--Informations kort-->
+            <h2>WANDA MAXIMOF</h2>
+            <p>
+              Notably powerful, Wanda Maximoff has fought both against and
+              with the Avengers, attempting to hone her abilities and do what
+              she believes is right to help the world.
+            </p>
+          </div>
         </div>
         <div class="cards"> <!-- Parent för kortinformation -->
           <div class="card"> <!-- Child till "cards"-->
@@ -179,14 +213,14 @@
     <div class="circle1"></div> <!--Cirklarnas som syns på skärmen-->
     <div class="circle2"></div>
     <div class="circle3"></div>
-    <div class="circle4"></div>
-  </body>
-</html>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script> <!--JavaScriptet-->
-    <script src="js/main.js"></script> <!--Javascript refereing-->
-    <script src="js/test.js"></script>
+    <div class="circle4"></div>    
     <footer>
-        <a href="https://github.com/MagnusLindgren/JavascriptProject">Source Code</a> 
-        <p>&copy Magnus Lindgren & Marcus Backholm</p>
-    </footer>-->
+      <p> <a href="https://github.com/MagnusLindgren/JavascriptProject">Source Code</a> 
+        &copy Magnus Lindgren & Marcus Backholm</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script> <!--JavaScriptet-->
+    <script type="module" src="js/main.js"></script> <!--Javascript refereing-->
+    <script src="js/test.js"></script>
+  </body>
 </html>
