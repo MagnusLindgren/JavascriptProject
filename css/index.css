@@ -11,6 +11,10 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    background-image: url("../img/back.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 h1{
@@ -33,6 +37,10 @@ p {
 }
 
 a {
+    text-decoration: none;
+}
+
+a:visited {
     text-decoration: none;
 }
 
@@ -164,7 +172,7 @@ a {
 }
 
 .cards {
-    height: 500px;
+    height: 80%;
     overflow-y: scroll; /*Scrollbar för x antal informationskort.*/
 }
 
@@ -210,6 +218,8 @@ a {
 .games {
     flex: -2;
     margin: 5rem;
+    min-width: 60%;
+    height: 81vh;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -248,8 +258,9 @@ footer {
     flex-direction: column;
     left: 0;
     bottom: 0;
-    width: 100%;
-    background-color: rgba(54, 54, 54, 0.308);
+    width: 85%;
+    background-color: rgba(0, 0, 0, 0.438);
+    backdrop-filter: blur(1rem);
     text-align: center;
     z-index: 100;
 }

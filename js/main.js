@@ -18,7 +18,8 @@ searchButton.addEventListener('click', executeSearch);
 
 /* Sökfunktion */
 function executeSearch() {
-    
+    let card = document.querySelectorAll('.card');
+    clearSearch(card);
     searchTerm = searchBox.value;
     testFunction();
     if (searchTerm != null && searchTerm != "") {
@@ -31,11 +32,15 @@ function executeSearch() {
     }
 }
 
-/* Skapa innehåll till sökresultat */ 
-
-
+/* Skapa innehåll till sökresultat. Se content.js */ 
 
 /* Funktion för att radera sökresultat */
+// Raderar det som sätts i parametern
+function clearSearch(clear) {
+    for (let i= 0; i < clear.length; i++) {
+        clear[i].remove();        
+    }
+}
 
 /* Funktion för att spara via localStorage */
 
