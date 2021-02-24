@@ -53,8 +53,8 @@ a {
 #button{
     position: relative;
     left: 50px;
-    height: 60px;
-    width: 150px;
+    height: 40px;
+    width: 80px;
     font-size: large;
     background: linear-gradient(
         to right bottom,
