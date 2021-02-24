@@ -1,21 +1,31 @@
 "use strict";
 export { searchTerm };
+import { testFunction } from "./modules/api.js";
+
 let searchTerm;
-/* Sökfunktion */
+const searchButton = document.querySelector('#button');
 const searchBox = document.querySelector('.searchbar');
 
 searchBox.addEventListener('keyup', function(e) {
     e.preventDefault();
     if (e.keyCode == 13) {
-        //executeSearch();
-        searchTerm = searchBox.value;
-        console.log(searchBox.value);
-        return searchTerm;
+        searchButton.click();
     }
 });
 
+searchButton.addEventListener('click', executeSearch);
+
+/* Sökfunktion */
 function executeSearch() {
-    console.log("sökt");     
+    
+    searchTerm = searchBox.value;
+    testFunction();
+    if (searchTerm != null && searchTerm != "") {
+        //fetchApi(comicUrl(searchTerm))
+        //    .then(response => {
+        //        createCard();
+        //    });        
+    }
 }
 /* Url byggare */
 

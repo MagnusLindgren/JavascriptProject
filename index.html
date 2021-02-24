@@ -13,6 +13,8 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Marvel Search</title>
 </head>
 <body>
@@ -20,11 +22,12 @@
       <div class="dashboard">
         <!-- testing -->
         <div class="status">
-          <input
-            class="searchbar"
-            type="text"
-            placeholder="Search your hero..."
-          />
+          <div id="search">
+            <input class="searchbar" type="text" placeholder="Search your hero..."/>
+            <button id="button" class="fa fa-search" type="submit"></button>
+          </div>
+        </div>
+        <div class="checkLefts">
           <p class="boxtext">Select browsing</p>
           <div class="clickbox">
             <input id="checkbox1" type="checkbox">
@@ -38,7 +41,7 @@
             <input id="checkbox3" type="checkbox">
             <label class="text3" for="checkbox3">Stories</label>
           </div>        
-          <button id="button" type="submit">Search</button></div> <!-- Tillfällig knapp position-->
+        </div>
         <!-- end test -->
         <div class="user"></div>
         <div class="links">
@@ -193,9 +196,10 @@
         &copy Magnus Lindgren & Marcus Backholm</p>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script> <!--JavaScriptet-->
-    <!--<script type="module" src="js/main.js"></script>-->
+    <!--JavaScriptet-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script> 
+    <script type="module" src="js/main.js"></script>
     <!--<script src="js/test.js"></script>-->
-    <script src="js/marcus.js"></script>
+    <!--<script src="js/marcus.js"></script>-->
   </body>
 </html>
