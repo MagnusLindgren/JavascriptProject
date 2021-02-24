@@ -36,5 +36,3 @@ function executeSearch() {
 - bild serietidningen
 - information om serietidningen
 - skapare */
-
-/* Vid start ifån hemsidan så skall superhjältarna redan vara implementerade i menyn*/
