@@ -60,7 +60,7 @@ a {
 
 #button{
     position: relative;
-    /*left: 50px;*/
+    outline: none;
     height: 53px;
     width: 50px;
     font-size: large;
@@ -174,14 +174,15 @@ a {
         rgba(255, 255, 255, 0.7),
         rgba(255,255,255,0.3)
         );
-        border: none;
-        width: 80%;
-        padding: 1rem;
-        border-radius: 2rem 0 0 2rem;
-        text-align: center;
-        font-size: large;
-        left: 100px;
-        box-shadow: 6px 6px 20px rgb(0, 0, 0);        
+    border: none;
+    width: 80%;
+    padding: 1rem;
+    border-radius: 2rem 0 0 2rem;
+    text-align: center;
+    font-size: large;
+    left: 100px;
+    box-shadow: 6px 6px 20px rgb(0, 0, 0);
+    outline: none;        
 }
 
 .boxtext {

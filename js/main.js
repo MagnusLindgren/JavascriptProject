@@ -1,6 +1,7 @@
 "use strict";
 export { searchTerm };
-import { testFunction } from "./modules/api.js";
+import { testFunction } from './modules/api.js';
+import { createHeroCard } from './modules/content.js';
 
 let searchTerm;
 const searchButton = document.querySelector('#button');
@@ -25,17 +26,22 @@ function executeSearch() {
         //    .then(response => {
         //        createCard();
         //    });        
+    } else {
+        alert("You can't leave the box empty!")
     }
 }
-/* Url byggare */
-
-/* Funktion för att hämta data från API (fetch) */
 
 /* Skapa innehåll till sökresultat */ 
+
+
 
 /* Funktion för att radera sökresultat */
 
 /* Funktion för att spara via localStorage */
+
+/* Funktion för att hämta data från API (fetch) */
+
+/* Url byggare finns i api.js*/
 
 /*Funktion Superhjältar
 - bild på hjälten

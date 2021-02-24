@@ -14,7 +14,7 @@ function comicUrl() {
     url.searchParams.append('ts', newTime);
     url.searchParams.append('apikey', publicKey);
     url.searchParams.append('hash', hash);
-    url.searchParams.append('name', 'searchTerm');
+    url.searchParams.append('name', searchTerm);
     
     return url;
 };
