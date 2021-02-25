@@ -7,6 +7,8 @@ let searchTerm;
 const searchButton = document.querySelector('#button');
 const searchBox = document.querySelector('.searchbar');
 
+checkCookie();
+
 searchBox.addEventListener('keyup', function(e) {
     e.preventDefault();
     if (e.keyCode == 13) {
@@ -23,6 +25,7 @@ function executeSearch() {
     searchTerm = searchBox.value;
     testFunction();
     if (searchTerm != null && searchTerm != "") {
+        setCookie("Recently searched", searchTerm, 30);
         //fetchApi(comicUrl(searchTerm))
         //    .then(response => {
         //        createCard();
@@ -42,7 +45,42 @@ function clearSearch(clear) {
     }
 }
 
-/* Funktion för att spara via localStorage */
+/* Funktion för att spara via kakor */
+// Kaktest 
+function setCookie(cName, cValue, cExpire) {
+    const date = new Date();
+    date.setTime(date.getTime() + (cExpire*24*60*60*1000));
+    const expires = "expires="+date.toUTCString();
+    document.cookie = `${cName}=${cValue};${expires};path=/`;
+}
+
+function getCookie(cName) {
+    let name = cName + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+
+    for (let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.lenght, c.lenght);
+        }
+    }
+    return "";
+}
+
+function checkCookie() {
+    let searchTerm = getCookie("Recently searched"); // hämtar senaste sökordet
+    let searchInput = document.querySelector('.user');
+
+    if (searchTerm != "") {        
+        searchInput.innerText = searchTerm;
+    } else {
+        searchInput.innerText = "You havn't searched anything yet";
+    }
+}
 
 /* Funktion för att hämta data från API (fetch) */
 
