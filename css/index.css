@@ -15,6 +15,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    color: #FBCA03;
 }
 
 h1{
@@ -42,6 +43,7 @@ a {
 
 a:visited {
     text-decoration: none;
+    color: #8b0000;
 }
 
 .glass {
@@ -145,11 +147,11 @@ a:visited {
 
 .link h2 {
     padding: 0rem 1rem;
-    color: rgb(255, 115, 0);
+    /*color: rgb(255, 115, 0);*/
 }
 
 .presslink {
-    color: rgb(255, 115, 0);
+    color: #FBCA03;
 }
 
 .pro{
@@ -161,7 +163,7 @@ a:visited {
 
 .pro, h2
 {
-    color: rgb(255, 115, 0);
+    color: #FBCA03;
 }
 
 
@@ -195,6 +197,7 @@ a:visited {
 
 .boxtext {
     font-size: 35px;
+    color: #FBCA03
 }
 
 .clickbox {
@@ -210,7 +213,7 @@ a:visited {
 
 .text1,.text2,.text3 {
     font-size: 25px;
-    color: rgb(255, 115, 0);
+    color: antiquewhite;
     margin-left: 1em;
 }
 
@@ -249,7 +252,7 @@ a:visited {
 }
 
 .card-info, p{
-    color: rgb(255, 115, 0);
+    color: antiquewhite;
 }
 
 footer {
