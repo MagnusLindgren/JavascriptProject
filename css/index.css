@@ -79,9 +79,10 @@ a:visited {
         rgba(255, 255, 255, 0.7),
         rgba(255,255,255,0.3)
         );
-        border-radius: 0 2rem 2rem 0;
-        border: none;
-        box-shadow: 6px 6px 10px rgb(0, 0, 0);
+    border-radius: 0 2rem 2rem 0;
+    border: none;
+    box-shadow: 6px 6px 10px rgb(0, 0, 0);
+    cursor: pointer;
 }
 
 .circle1,.circle2,.circle3,.circle4 {
@@ -192,7 +193,8 @@ a:visited {
     font-size: large;
     left: 100px;
     box-shadow: 6px 6px 20px rgb(0, 0, 0);
-    outline: none;        
+    outline: none;
+    cursor: text;        
 }
 
 .boxtext {
@@ -204,11 +206,14 @@ a:visited {
     display: flex;
     flex-direction: row;
     margin: 1em;
+    cursor: pointer;
 }
 
 #checkbox1,#checkbox2,#checkbox3 {
     width: 20px;
     height: 20px;
+    margin-top: 5px;
+    cursor: pointer;
 }
 
 .text1,.text2,.text3 {
@@ -217,6 +222,9 @@ a:visited {
     margin-left: 1em;
 }
 
+.searched {
+    color: antiquewhite;
+}
 
 .games {
     flex: -2;

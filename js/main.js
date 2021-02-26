@@ -54,18 +54,14 @@ function setCookie(cName, cValue, cExpire) {
     document.cookie = `${cName}=${cValue};${expires};path=/`;
 }
 
-function getCookie(cName) {
-    let name = cName + "=";
-    let decodedCookie = decodeURIComponent(document.cookie);
-    let ca = decodedCookie.split(';');
+function getCookie(cName) {   
+    let ca = document.cookie.split(';');
 
     for (let i = 0; i < ca.length; i++) {
-        let c = ca[i];
-        while (c.charAt(0) == ' ') {
-            c = c.substring(1);
-        }
-        if (c.indexOf(name) == 0) {
-            return c.substring(name.lenght, c.lenght);
+        let c = ca[i].split("=");
+
+        if (cName == c[0].trim()) {
+            return decodeURIComponent(c[1]);
         }
     }
     return "";
@@ -73,9 +69,9 @@ function getCookie(cName) {
 
 function checkCookie() {
     let searchTerm = getCookie("Recently searched"); // hämtar senaste sökordet
-    let searchInput = document.querySelector('.user');
+    let searchInput = document.querySelector('.searched');
 
-    if (searchTerm != "") {        
+    if (searchTerm != "") {      
         searchInput.innerText = searchTerm;
     } else {
         searchInput.innerText = "You havn't searched anything yet";
