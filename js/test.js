@@ -1,4 +1,4 @@
-"use strict";
+/*
 const privateKey = "b007589db8518dcbb941ed7bdef21b3840498b0a";
 const publicKey = "b52df188d35ef1bbeef3878e0342661c";
 let newTime = new Date().getTime();
@@ -21,4 +21,4 @@ document.querySelector("#button").onclick = async function() {
     const data = await response.json();
     console.log(data);
     return data;
-}
+}*/
