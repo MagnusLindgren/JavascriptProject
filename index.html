@@ -23,7 +23,7 @@
         <!-- testing -->
         <div class="status">
           <div id="search">
-            <input class="searchbar" type="text" placeholder="Search your hero..."/>
+            <input id="searchbar" class="searchbar" type="text" placeholder="Search your hero..."/>
             <button id="button" class="fa fa-search" type="submit"></button>
           </div>
         </div>
@@ -87,13 +87,13 @@
       </div>
       <!-- härifrån ska kort skapas -->
       <div class="games"> <!-- Parent för status, searchbar, button och cards/card -->
-        <div class="card">
-            <img id="img" src="./img/Wanda-Maximoff.jpg" alt="" style="width: 12rem; height: 12em" />
+        <div id="searchCard" class="card">
+            <img id="topImage" src="" alt="" style="width: 12rem; height: 12em; visibility: hidden"  />
 
           <div class="card-info"> <!--Informations kort-->
-            <h2 class="heroName">Hero:</h2>
-            <p class="informationHero">
-              Information:
+            <h2 id="heroName" class="heroName"></h2>
+            <p id="informationHero" class="informationHero">
+              
             </p>
           </div>
         </div>
@@ -202,6 +202,8 @@
     </footer>
 
     <!--JavaScriptet-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script> 
     <!--<script type="module" src="js/main.js"></script>-->
     <!--<script src="js/test.js"></script>-->

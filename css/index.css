@@ -179,6 +179,8 @@ a:visited {
     overflow-y: scroll; /*Scrollbar för x antal informationskort.*/
 }
 
+
+
 .status input  {
     background: linear-gradient(
         to right bottom,
@@ -236,6 +238,11 @@ a:visited {
     justify-content: space-evenly;
 
 }
+
+#searchCard {
+ visibility: hidden;
+}
+
 .card {
     display: flex;
     background: -moz-linear-gradient(to left top,
