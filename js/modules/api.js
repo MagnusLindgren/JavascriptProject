@@ -25,6 +25,6 @@ async function fetchApi(url) {
 // För att testa om modules fungerar
 /*
 function testFunction() {
-    console.log(searchTerm, "från main.js");
+console.log(searchTerm, "från main.js");
 }*/
 
