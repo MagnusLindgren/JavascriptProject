@@ -1,10 +1,11 @@
 "use strict";
 /* Skickar och hämtar det vi behöver till och från andra filer */
-export { searchTerm };
+export { query };
 // import { testFunction } from './modules/api.js'; // För att testa moduler
-import { createHeroCard } from './modules/content.js';
+import { createCard } from './modules/content.js';
+import { findHero } from './modules/api.js';
 
-let searchTerm;
+let query;
 const searchButton = document.querySelector('#button');
 const searchBox = document.querySelector('.searchbar');
 
@@ -22,16 +23,13 @@ searchButton.addEventListener('click', executeSearch);
 
 /* Sökfunktion */
 function executeSearch() {
-    let card = document.querySelectorAll('.card');
-    clearSearch(card);
-    searchTerm = searchBox.value;
+    //let card = document.querySelectorAll('.card');
+    //clearSearch(card);
+    query = searchBox.value;
     // testFunction(); // För att testa moduler
-    if (searchTerm != null && searchTerm != "") {
-        setCookie("Recently searched", searchTerm, 30);
-        //fetchApi(comicUrl(searchTerm))
-        //    .then(response => {
-        //        createCard();
-        //    });        
+    if  (query != null && query != "") {
+        setCookie("Recently searched", query, 30);
+        findHero(query);
     } else {
         alert("You can't leave the box empty!")
     }
@@ -72,12 +70,12 @@ function getCookie(cName) {
 }
 
 function checkCookie() {
-    let searchTerm = getCookie("Recently searched"); // hämtar senaste sökordet
+    let query = getCookie("Recently searched"); // hämtar senaste sökordet
     let searchInput = document.querySelector('.searched');
 
-    if (searchTerm != "") {
-        for (let i = 0; i < searchTerm.length; i++) {
-            let element = searchTerm[i];
+    if  (query != "") {
+        for (let i = 0; i < query.length; i++) {
+            let element = query[i];
 
             searchInput.innerHTML = `${element} <br>`;
         }   

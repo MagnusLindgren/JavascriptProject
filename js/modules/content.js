@@ -1,8 +1,8 @@
-export { createHeroCard };
-//import {hero} from './api.js';
+export { createCard };
+// import { result } from './api.js';
 
 // Förberett för skapelse. Behöver hämtningen klar innan slutförelse.
-function createHeroCard(hero) {
+/*function createCard(hero) {
     // Grundstenen
     const main = document.querySelector('.games');
     // Skapa element
@@ -30,5 +30,14 @@ function createHeroCard(hero) {
     heroName.classList.add('heroName');
     cardInfo.classList.add('cardInfo');
     card.classList.add('card');
-};
+};*/
+
+function createCard(result) {
+    document.getElementById('searchCard').style.visibility = 'visible';
+    document.getElementById('heroName').textContent = result.name;
+    document.getElementById('informationHero').textContent = result.description;
+    const img = result.thumbnail.path + "." + result.thumbnail.extension;
+    document.getElementById('topImage').src = img;
+    document.getElementById('topImage').style.visibility = 'visible';
+}
 
