@@ -28,12 +28,7 @@ document.querySelector('#button').onclick = async function() {
     return data;
 }
 
-const searchBox = document.querySelector('.searchbar').value = async function() {
-    const response = await fetch(GetCharacter());
-    const data = await response.json();
-    console.log(data);
-    return data;
-}
+const searchBox = document.querySelector('.searchbar')
 
 
 // Få searchbar att ta input och skriva ut bild samt information om hjälten.
