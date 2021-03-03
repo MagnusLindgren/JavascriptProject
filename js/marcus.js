@@ -4,11 +4,11 @@
 // id="button" knappfunktion.
 
 // document.addEventListener("DOMContentLoaded", heroBind);
-var publicKey = "cb4caffe743bf27799e98341a711c25f";
-var privateKey = "a2772e164899250bf624c834394e5fc6f320ff35";
+const publicKey = "cb4caffe743bf27799e98341a711c25f";
+const privateKey = "a2772e164899250bf624c834394e5fc6f320ff35";
 document.getElementById('button').addEventListener('click', function (event) {
     console.log("click");
-    var searchButton = document.getElementById("searchbar");
+    const searchButton = document.getElementById("searchbar");
     document.getElementById('heroName').textContent = "Hero: ";
     document.getElementById('informationHero').textContent = "Information: ";
 
@@ -19,13 +19,13 @@ document.getElementById('button').addEventListener('click', function (event) {
 
 function findHero(query, event) {
 
-    var website = 'https://gateway.marvel.com/v1/public/characters';
+    const website = 'https://gateway.marvel.com/v1/public/characters';
 
     console.log("do hash");
-    var ts = event.timeStamp;
-    var hash = CryptoJS.MD5(ts + privateKey + publicKey).toString();
+    const ts = event.timeStamp;
+    const hash = CryptoJS.MD5(ts + privateKey + publicKey).toString();
     console.log(hash);
-    var url = website;
+    const url = website;
     $.getJSON(url, {
         ts: ts,
         apikey: publicKey,
@@ -34,14 +34,14 @@ function findHero(query, event) {
     })
         .done(function (response) {
             console.log(response);
-            var result = response.data.results[0];
+            const result = response.data.results[0];
             if (result != null) {
                 console.log("WE HAVE A RESULT!!!");
                 console.log(result);
                 document.getElementById('searchCard').style.visibility = 'visible';
                 document.getElementById('heroName').textContent = result.name;
                 document.getElementById('informationHero').textContent = result.description;
-                var img = result.thumbnail.path + "." + result.thumbnail.extension;
+                const img = result.thumbnail.path + "." + result.thumbnail.extension;
                 document.getElementById('topImage').src = img;
                 document.getElementById('topImage').style.visibility = 'visible';
             } else {
