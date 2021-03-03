@@ -3,9 +3,9 @@
 
 "use strict";
 const PublKey = 'cb4caffe743bf27799e98341a711c25f';
-const privKey = 'cb4caffe743bf27799e98341a711c25f';
+const privKey = 'a2772e164899250bf624c834394e5fc6f320ff35';
 
-const getPostPromise = fetch('https://gateway.marvel.com/') // Tar ett argument.
+const getPostPromise = fetch('https://gateway.marvel.com:443/v1/public/characters?apikey=cb4caffe743bf27799e98341a711c25f')
 
 getPostPromise
 .then(data => data.json())

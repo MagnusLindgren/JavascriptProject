@@ -88,13 +88,3 @@ function checkCookie() {
 /* Funktion för att hämta data från API (fetch) */
 
 /* Url byggare finns i api.js*/
-
-/*Funktion Superhjältar
-- bild på hjälten
-- information om hjälten
-- skapare */
-
-/* funktion Comics
-- bild serietidningen
-- information om serietidningen
-- skapare */
