@@ -19,12 +19,11 @@ body {
 }
 
 h1{
-    color: rgb(255, 115, 0);
+    color: #FBCA03;
     font-weight: 600;
     font-size: 3rem;
     opacity: 0.8;
-    position: relative;
-    left: 210px;
+    text-shadow: 2px 2px black;
 }
 
 h2{
