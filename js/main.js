@@ -1,12 +1,14 @@
 "use strict";
+/* Skickar och hämtar det vi behöver till och från andra filer */
 export { searchTerm };
-import { testFunction } from './modules/api.js';
+// import { testFunction } from './modules/api.js'; // För att testa moduler
 import { createHeroCard } from './modules/content.js';
 
 let searchTerm;
 const searchButton = document.querySelector('#button');
 const searchBox = document.querySelector('.searchbar');
 
+/* Kollar om det finnas några tidigare sökningar */
 checkCookie();
 
 searchBox.addEventListener('keyup', function(e) {
@@ -23,7 +25,7 @@ function executeSearch() {
     let card = document.querySelectorAll('.card');
     clearSearch(card);
     searchTerm = searchBox.value;
-    testFunction();
+    // testFunction(); // För att testa moduler
     if (searchTerm != null && searchTerm != "") {
         setCookie("Recently searched", searchTerm, 30);
         //fetchApi(comicUrl(searchTerm))
