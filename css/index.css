@@ -198,6 +198,10 @@ p {
   font-size: larger;
   text-shadow: 1px 1px #ff0000;
 }
+.informationHero{
+    font-size: larger;
+    font-weight: bold;
+}
 
 footer {
   display: flex;
