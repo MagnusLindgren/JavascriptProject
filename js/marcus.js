@@ -56,5 +56,82 @@ function findHero(query, event) { // Funktion för att hämta hjälte med inform
 }
 
 
+function iterateComics(response) {
 
+    const website = 'https://gateway.marvel.com/v1/public/characters/' + response.data.results[0].id + '/comics/' + publicKey;
+    fetch(website, {
+        mode: 'no-cors'
+    });
+
+    /*
+    console.log('do hash')
+    const ts = event.timeStamp;
+    const hash = CryptoJS.MD5(ts + privateKey + publicKey).toString();
+    console.log(hash);
+    const url = website;
+    $.getJSON(url, {
+        ts: ts,
+        apikey: publicKey,
+        hash: hash,
+        id: response.data.results[0].id*/
+    /*})
+    .done(function (response) {
+        console.log(response);
+        const result = response.data.results[0];
+        if(result != null) {
+            console.log(result);
+            while(result > 0) {
+                
+            }
+        }
+    })*/
+}
+
+/*<img id="comicImg" src="" alt="" style="width: 12rem; height: 12em; visibility: hidden"  />
+<div class="card-info"> <!--Informations kort-->
+<h2 id="comicName" class="comicName"></h2>
+<p id="informationComicHero" class="informationComicHero"></p>
+
+
+/*function findHero2(query, event) {
+    var website = 'https://gateway.marvel.com/v1/public/characters';
+    var req = new XMLHttpRequest();
+        console.log("do hash");
+    var ts = event.timeStamp;
+    var hash = CryptoJS.MD5(ts + privateKey + publicKey).toString();
+        var url = website + "?name=" + query + "&ts=" + ts + '&apikey=' + publicKey + "&hash=" + hash;
+    console.log(url);
+    req.open('GET', url, true);
+    req.setRequestHeader('Content-Type', 'application/json');
+    req.addEventListener('load', function () {
+        console.log("load event triggered");
+        if (req.status >= 200 && req.status < 400) {
+            console.log("decent status code");
+            var response = JSON.parse(req.responseText);
+            var result = response.data.results[0];
+            console.log(result);k
+        
+           if (result != null) {
+                console.log("WE HAVE A RESULT!!!");
+                console.log(result);
+                document.getElementById('searchCard').style.visibility = 'visible';
+                document.getElementById('heroName').textContent = result.name;
+                document.getElementById('informationHero').textContent = result.description;
+                var img = result.thumbnail.path + "." + result.thumbnail.extension;
+                document.getElementById('topImage').src = img;
+                document.getElementById('topImage').style.visibility = 'visible';
+            } else {
+                console.log("we do not have a result :(((((((((((((((((((((")
+                document.getElementById('heroName').textContent = 'NOT FOUND FFS - Search better!';
+                document.getElementById('topImage').src = "";
+                document.getElementById('topImage').style.visibility = 'hidden';
+                document.getElementById('informationHero').textContent = '';
+            }
+        }
+        event.preventDefault();
+    });
+    console.log("Sending request");
+    req.send(null);
+};
+*/ 
 
