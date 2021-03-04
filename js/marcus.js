@@ -7,13 +7,15 @@
 const publicKey = "cb4caffe743bf27799e98341a711c25f";
 const privateKey = "a2772e164899250bf624c834394e5fc6f320ff35";
 document.getElementById('button').addEventListener('click', function (event) {
-    console.log("click");
+   // console.log("click");
     const searchButton = document.getElementById("searchbar");
     document.getElementById('heroName').textContent = "Hero: ";
     document.getElementById('informationHero').textContent = "Information: ";
-    document.getElementById('') // Här skall det läggas in nya ID'S för comics.
+    document.getElementById('informationComicHero').textContent = "Description: "; // Här skall det läggas in nya ID'S för comics.
+    document.getElementById('comicName').textContent = "Comic: ";
 
     findHero(searchButton.value, event); 
+    iterateComics(searchButton.value, event); 
     document.getElementById('searchbar').textContent = "";
 });
 
@@ -22,10 +24,10 @@ function findHero(query, event) {
 
     const website = 'https://gateway.marvel.com/v1/public/characters';
 
-    console.log("do hash");
+   // console.log("do hash");
     const ts = event.timeStamp;
     const hash = CryptoJS.MD5(ts + privateKey + publicKey).toString();
-    console.log(hash);
+   // console.log(hash);
     const url = website;
     $.getJSON(url, {
         ts: ts,
@@ -37,7 +39,7 @@ function findHero(query, event) {
             console.log(response);
             const result = response.data.results[0];
             if (result != null) {
-                console.log("WE HAVE A RESULT!!!");
+                //console.log("WE HAVE A RESULT!!!");
                 console.log(result);
                 document.getElementById('searchCard').style.visibility = 'visible';
                 document.getElementById('heroName').textContent = result.name;
@@ -45,8 +47,9 @@ function findHero(query, event) {
                 const img = result.thumbnail.path + "." + result.thumbnail.extension;
                 document.getElementById('topImage').src = img;
                 document.getElementById('topImage').style.visibility = 'visible';
+                iterateComics(response); // Skickar vidare variabel.
             } else {
-                console.log("we do not have a result :(((((((((((((((((((((")
+                //console.log("we do not have a result :(((((((((((((((((((((")
                 document.getElementById('heroName').textContent = 'NOT FOUND FFS - Search better!';
                 document.getElementById('topImage').src = "";
                 document.getElementById('topImage').style.visibility = 'hidden';
@@ -61,7 +64,8 @@ function findHero(query, event) {
 
 
 function iterateComics(query, event) {
-    const website = 'https://gateway.marvel.com/v1/public/comics';
+    
+    const website = 'https://gateway.marvel.com/v1/public/characters/' + response.data.result[0].id + '/comics/' + publicKey;
 
     console.log('do hash')
     const ts = event.timeStamp;
@@ -76,14 +80,20 @@ function iterateComics(query, event) {
     })
     .done(function (response) {
         console.log(response);
-        const result = response.data.result[0];
-        if (result != null) {
-            console.log("WE HAVE A RESULT!!!");
-            console.log(result);
-            document.getElementById('')
-        }
+        const result = response.data.results[0];
+
     })
 }
+
+/*<img id="comicImg" src="" alt="" style="width: 12rem; height: 12em; visibility: hidden"  />
+<div class="card-info"> <!--Informations kort-->
+  <h2 id="comicName" class="comicName"></h2>
+  <p id="informationComicHero" class="informationComicHero"></p>
+
+
+
+
+
 
   
 /*function findHero2(query, event) {
