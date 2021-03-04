@@ -15,7 +15,7 @@ document.getElementById('button').addEventListener('click', function (event) {
     document.getElementById('comicName').textContent = "Comic: ";
 
     findHero(searchButton.value, event); 
-    //iterateComics(searchButton.value, event); 
+    iterateComics(searchButton.value, event); 
     document.getElementById('searchbar').textContent = "";
 });
 
@@ -76,8 +76,8 @@ function iterateComics(response) {
     const hash = CryptoJS.MD5(ts + privateKey + publicKey).toString();
     console.log(hash);
     const url = website;
-    $.getJSON(url, {  callback : '?'
-        /*ts: ts,
+    $.getJSON(url, {
+        ts: ts,
         apikey: publicKey,
         hash: hash,
         id: response.data.results[0].id*/
@@ -85,19 +85,29 @@ function iterateComics(response) {
     .done(function (response) {
         console.log(response);
         const result = response.data.results[0];
+        if(result != null) {
+            console.log(result);
+            while(result > 0) {
+                
+            }
+        }
 
     })*/
 }
 
-
 /*<img id="comicImg" src="" alt="" style="width: 12rem; height: 12em; visibility: hidden"  />
 <div class="card-info"> <!--Informations kort-->
-  <h2 id="comicName" class="comicName"></h2>
-  <p id="informationComicHero" class="informationComicHero"></p>
+<h2 id="comicName" class="comicName"></h2>
+<p id="informationComicHero" class="informationComicHero"></p>
 
-  
+
+
+
+
+
+
 /*function findHero2(query, event) {
-  
+
     var website = 'https://gateway.marvel.com/v1/public/characters';
 
     var req = new XMLHttpRequest();
@@ -116,7 +126,7 @@ function iterateComics(response) {
             console.log("decent status code");
             var response = JSON.parse(req.responseText);
             var result = response.data.results[0];
-            console.log(result);
+            console.log(result);k
         
            if (result != null) {
                 console.log("WE HAVE A RESULT!!!");
@@ -140,4 +150,5 @@ function iterateComics(response) {
     });
     console.log("Sending request");
     req.send(null);
-}; */
+};
+*/
