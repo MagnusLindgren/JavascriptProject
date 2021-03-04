@@ -47,6 +47,7 @@ function findHero(query, event) {
                 const img = result.thumbnail.path + "." + result.thumbnail.extension;
                 document.getElementById('topImage').src = img;
                 document.getElementById('topImage').style.visibility = 'visible';
+                iterateComics(response); // Skickar vidare variabel.
             } else {
                 //console.log("we do not have a result :(((((((((((((((((((((")
                 document.getElementById('heroName').textContent = 'NOT FOUND FFS - Search better!';
