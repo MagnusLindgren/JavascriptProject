@@ -15,7 +15,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  color: #fbca03;
+  color: black;
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
@@ -33,7 +33,7 @@ h2 {
 
 h2,
 p {
-  color: #000000;
+  color: #fbca03;
   font-weight: 500;
 }
 
