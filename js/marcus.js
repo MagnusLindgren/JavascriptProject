@@ -11,6 +11,7 @@ document.getElementById('button').addEventListener('click', function (event) {
     const searchButton = document.getElementById("searchbar");
     document.getElementById('heroName').textContent = "Hero: ";
     document.getElementById('informationHero').textContent = "Information: ";
+    document.getElementById('') // Här skall det läggas in nya ID'S för comics.
 
     findHero(searchButton.value, event); 
     document.getElementById('searchbar').textContent = "";
@@ -51,13 +52,37 @@ function findHero(query, event) {
                 document.getElementById('topImage').style.visibility = 'hidden';
                 document.getElementById('informationHero').textContent = '';
             }
-
-   
         })
         .fail(function (err) {
             // the error codes are listed on the dev site
             console.log(err);
         });
+}
+
+
+function iterateComics(query, event) {
+    const website = 'https://gateway.marvel.com/v1/public/comics';
+
+    console.log('do hash')
+    const ts = event.timeStamp;
+    const hash = CryptoJS.MD5(ts + privateKey + publicKey).toString();
+    console.log(hash);
+    const url = website;
+    $.getJSON(url, {
+        ts: ts,
+        apikey: publicKey,
+        hash: hash,
+        name: query
+    })
+    .done(function (response) {
+        console.log(response);
+        const result = response.data.result[0];
+        if (result != null) {
+            console.log("WE HAVE A RESULT!!!");
+            console.log(result);
+            document.getElementById('')
+        }
+    })
 }
 
   
@@ -106,14 +131,4 @@ function findHero(query, event) {
     console.log("Sending request");
     req.send(null);
 };
-
-
-
-
-
-// Få searchbar att ta input och skriva ut bild samt information om hjälten.
-
-/*Funktion Superhjältar
-- bild på hjälten
-- information om hjälten
-- skapare */
+*/

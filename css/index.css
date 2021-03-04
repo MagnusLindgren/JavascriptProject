@@ -23,7 +23,7 @@ h1{
     font-weight: 600;
     font-size: 3rem;
     opacity: 0.8;
-    text-shadow: 2px 2px black;
+    text-shadow: 2px 1px #ff0000;
 }
 
 h2{
@@ -34,6 +34,11 @@ h2,
 p {
     color: #000000;
     font-weight: 500;
+}
+
+h4 {
+    color: #FBCA03;
+    text-shadow: 1px 1px #ff0000;
 }
 
 a {
@@ -84,42 +89,6 @@ a:visited {
     cursor: pointer;
 }
 
-.circle1,.circle2,.circle3,.circle4 {
-    background: rgb(255, 255, 255);
-    background: linear-gradient(
-        to right bottom,
-        rgba(61, 0, 0, 0.3),
-        rgba(255, 145, 42, 0.5)
-        );
-        height: 20rem;
-        width:  20rem;
-        position: absolute; /* Gör så jag kan flytta objektet vart jag vill*/
-        border-radius:50%; /* Gör så att kuberna blir till cirklar*/
-}
-
-.circle1 {
-    top: 5%;
-    right: 15%;
-}
-
-.circle2 {
-    bottom: 3%;
-    left: 12%;
-}
-
-.circle3 {
-    top: 20%;
-    right: 65%;
-    height: 15rem;
-    width: 15rem;
-}
-.circle4 {
-    top: 60%;
-    right: 25%;
-    height: 20rem;
-    width: 20rem;
-}
-
 .dashboard {
     flex: 1;
     display: flex;
@@ -136,24 +105,6 @@ a:visited {
         );
 }
 
-.link{
-    display: flex;
-    margin: 1rem 0rem;
-    padding: 1rem 5rem;
-    align-items: center;
-    position: relative;
-    /*top: 30%;*/
-    left: -75px;
-}
-
-.link h2 {
-    padding: 0rem 1rem;
-    /*color: rgb(255, 115, 0);*/
-}
-
-.presslink {
-    color: #FBCA03;
-}
 
 .pro{
     background: linear-gradient(to right top, #000000, #8b0000);
@@ -202,31 +153,6 @@ a:visited {
     cursor: text;        
 }
 
-.boxtext {
-    font-size: 35px;
-    color: #FBCA03
-}
-
-.clickbox {
-    display: flex;
-    flex-direction: row;
-    margin: 1em;
-    cursor: pointer;
-}
-
-#checkbox1,#checkbox2,#checkbox3 {
-    width: 20px;
-    height: 20px;
-    margin-top: 5px;
-    cursor: pointer;
-}
-
-.text1,.text2,.text3 {
-    font-size: 25px;
-    color: antiquewhite;
-    margin-left: 1em;
-}
-
 .searched {
     color: antiquewhite;
 }
@@ -271,15 +197,21 @@ a:visited {
 }
 
 .cardInfo, p{
-    color: antiquewhite;
+    color: #FBCA03;
+    font-size: larger;
+    text-shadow: 1px 1px #ff0000;
 }
 
 .cardInfo a{
-    color:#FBCA03;
+    color: #FBCA03;
+    font-size: larger;
+    text-shadow: 1px 1px #ff0000;
 }
 
 .cardInfo a:visited{
     color: #FBCA03;
+    font-size: larger;
+    text-shadow: 1px 1px #ff0000;
 }
 
 footer {
