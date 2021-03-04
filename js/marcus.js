@@ -66,7 +66,11 @@ function findHero(query, event) {
 function iterateComics(response) {
     
     const website = 'https://gateway.marvel.com/v1/public/characters/' + response.data.results[0].id + '/comics/' + publicKey;
+    fetch(website, {
+        mode: 'no-cors'
+    });
     
+    /*
     console.log('do hash')
     const ts = event.timeStamp;
     const hash = CryptoJS.MD5(ts + privateKey + publicKey).toString();
@@ -77,12 +81,12 @@ function iterateComics(response) {
         apikey: publicKey,
         hash: hash,
         id: response.data.results[0].id*/
-    })
+    /*})
     .done(function (response) {
         console.log(response);
         const result = response.data.results[0];
 
-    })
+    })*/
 }
 
 
