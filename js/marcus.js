@@ -63,10 +63,12 @@ function findHero(query, event) {
 }
 
 
-function iterateComics(query, event) {
+function iterateComics(response) {
     
-    const website = 'https://gateway.marvel.com/v1/public/characters/' + response.data.result[0].id + '/comics/' + publicKey;
+    const website = 'https://gateway.marvel.com/v1/public/characters/' + response.data.results[0].id + '/comics/' + publicKey;
 
+    
+    /*
     console.log('do hash')
     const ts = event.timeStamp;
     const hash = CryptoJS.MD5(ts + privateKey + publicKey).toString();
@@ -76,13 +78,13 @@ function iterateComics(query, event) {
         ts: ts,
         apikey: publicKey,
         hash: hash,
-        name: query
+        id: response.data.results[0].id
     })
     .done(function (response) {
         console.log(response);
         const result = response.data.results[0];
 
-    })
+    })*/
 }
 
 /*<img id="comicImg" src="" alt="" style="width: 12rem; height: 12em; visibility: hidden"  />
