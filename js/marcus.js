@@ -15,7 +15,7 @@ document.getElementById('button').addEventListener('click', function (event) {
     document.getElementById('comicName').textContent = "Comic: ";
 
     findHero(searchButton.value, event); 
-    iterateComics(searchButton.value, event); 
+    //iterateComics(searchButton.value, event); 
     document.getElementById('searchbar').textContent = "";
 });
 
@@ -66,36 +66,30 @@ function findHero(query, event) {
 function iterateComics(response) {
     
     const website = 'https://gateway.marvel.com/v1/public/characters/' + response.data.results[0].id + '/comics/' + publicKey;
-
     
-    /*
     console.log('do hash')
     const ts = event.timeStamp;
     const hash = CryptoJS.MD5(ts + privateKey + publicKey).toString();
     console.log(hash);
     const url = website;
-    $.getJSON(url, {
-        ts: ts,
+    $.getJSON(url, {  callback : '?'
+        /*ts: ts,
         apikey: publicKey,
         hash: hash,
-        id: response.data.results[0].id
+        id: response.data.results[0].id*/
     })
     .done(function (response) {
         console.log(response);
         const result = response.data.results[0];
 
-    })*/
+    })
 }
+
 
 /*<img id="comicImg" src="" alt="" style="width: 12rem; height: 12em; visibility: hidden"  />
 <div class="card-info"> <!--Informations kort-->
   <h2 id="comicName" class="comicName"></h2>
   <p id="informationComicHero" class="informationComicHero"></p>
-
-
-
-
-
 
   
 /*function findHero2(query, event) {
@@ -142,5 +136,4 @@ function iterateComics(response) {
     });
     console.log("Sending request");
     req.send(null);
-};
-*/
+}; */
