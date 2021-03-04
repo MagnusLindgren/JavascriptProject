@@ -186,6 +186,7 @@ a:visited {
 .cardInfo,
 p {
   color: antiquewhite;
+  font-size: small;
 }
 
 .cardInfo a {
