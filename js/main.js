@@ -2,7 +2,6 @@
 /* Skickar och hämtar det vi behöver till och från andra filer */
 export { query };
 // import { testFunction } from './modules/api.js'; // För att testa moduler
-import { createCard } from './modules/content.js';
 import { findHero } from './modules/api.js';
 
 let query;

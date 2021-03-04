@@ -52,7 +52,10 @@ function findHero(query) {
                 createCard(response);
             } else {
                 console.log("we do not have a result :(((((((((((((((((((((")
-                document.querySelector('.games').innerText = 'NOT FOUND FFS - Search better!';
+                const card = document.createElement('div');
+                document.querySelector('.games').append(card);
+                card.setAttribute('class', 'card');
+                card.innerText = 'NOT FOUND FFS - Search better!';
             }
         })
         .fail(function (err) {
