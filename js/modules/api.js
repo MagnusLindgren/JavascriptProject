@@ -45,12 +45,11 @@ function findHero(query) {
         name: query
     })
         .done(function (response) {
-            console.log(response);
-            const result = response.data.results[0];
-            if (result != null) {
+            console.log(response);            
+            if (response != null) {
                 console.log("WE HAVE A RESULT!!!");
-                console.log(result);
-                createCard(result);
+                console.log(response);
+                createCard(response);
 
             } else {
                 console.log("we do not have a result :(((((((((((((((((((((")

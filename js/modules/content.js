@@ -2,7 +2,7 @@ export { createCard };
 // import { result } from './api.js';
 
 // Förberett för skapelse. Behöver hämtningen klar innan slutförelse.
-/*function createCard(hero) {
+function createCard(result) {
     // Grundstenen
     const main = document.querySelector('.games');
     // Skapa element
@@ -11,27 +11,32 @@ export { createCard };
     const cardInfo = document.createElement('div');
     const heroInfo = document.createElement('div');
     const heroName = document.createElement('h2');
+    const copyright = document.createElement('p');
+
+    const prefix = result.data.results[0];
 
     // Lägg till element
-    heroInfo.append(cardInfo);
-    heroName.append(cardInfo);
-    cardInfo.append(card);
-    img.append(card);
-    card.append(main);
-
+    main.append(card);
+    card.append(img);
+    card.append(cardInfo);
+    cardInfo.append(heroName);
+    cardInfo.append(heroInfo);
+    cardInfo.append(copyright);
+    
     // Lägg till innhåll
-    heroName.innerHTML = `TestName`;
-    heroInfo.innerHTML =    `Testinormation
-                            <br>More Test 
-                            `;
+    img.src = `${prefix.thumbnail.path}.${prefix.thumbnail.extension}`;
+    heroName.innerHTML = `${prefix.name}`;
+    heroInfo.innerHTML = `${prefix.description}`;
+    copyright.innerHTML = `${result.attributionHTML}`;
 
     // Lägg till CSS
     heroInfo.classList.add('informationHero');
     heroName.classList.add('heroName');
+    img.setAttribute('id', 'topImage');
     cardInfo.classList.add('cardInfo');
     card.classList.add('card');
-};*/
-
+};
+/*
 function createCard(result) {
     document.getElementById('searchCard').style.visibility = 'visible';
     document.getElementById('heroName').textContent = result.name;
@@ -40,4 +45,4 @@ function createCard(result) {
     document.getElementById('topImage').src = img;
     document.getElementById('topImage').style.visibility = 'visible';
 }
-
+*/

@@ -178,7 +178,11 @@ a:visited {
     overflow-y: scroll; /*Scrollbar för x antal informationskort.*/
 }
 
+#topImage {
+    width: 12rem;
+    height: 12rem;
 
+}
 
 .status input  {
     background: linear-gradient(
@@ -258,15 +262,24 @@ a:visited {
     box-shadow: 6px 6px 90px rgb(0, 0, 0);
 }
 
-.card-info {
+.cardInfo {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 1em;
+    margin-left: 1em;
+    height: 10rem;
 }
 
-.card-info, p{
+.cardInfo, p{
     color: antiquewhite;
+}
+
+.cardInfo a{
+    color:#FBCA03;
+}
+
+.cardInfo a:visited{
+    color: #FBCA03;
 }
 
 footer {
