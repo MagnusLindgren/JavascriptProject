@@ -46,20 +46,14 @@ function findHero(query) {
     })
         .done(function (response) {
             console.log(response);            
-            if (response != null) {
+            if (response.data.results[0] != null) {
                 console.log("WE HAVE A RESULT!!!");
                 console.log(response);
                 createCard(response);
-
             } else {
                 console.log("we do not have a result :(((((((((((((((((((((")
-                document.getElementById('heroName').textContent = 'NOT FOUND FFS - Search better!';
-                document.getElementById('topImage').src = "";
-                document.getElementById('topImage').style.visibility = 'hidden';
-                document.getElementById('informationHero').textContent = '';
+                document.querySelector('.games').innerText = 'NOT FOUND FFS - Search better!';
             }
-
-   
         })
         .fail(function (err) {
             // the error codes are listed on the dev site

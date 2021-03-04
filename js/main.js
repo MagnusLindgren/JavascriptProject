@@ -23,15 +23,17 @@ searchButton.addEventListener('click', executeSearch);
 
 /* Sökfunktion */
 function executeSearch() {
-    //let card = document.querySelectorAll('.card');
-    //clearSearch(card);
+    const card = document.querySelectorAll('.card');
+    if (card.length != 0){
+        clearSearch(card);
+    }
     query = searchBox.value;
     // testFunction(); // För att testa moduler
     if  (query != null && query != "") {
         setCookie("Recently searched", query, 30);
         findHero(query);
     } else {
-        alert("You can't leave the box empty!")
+        alert("You can't leave the box empty!");
     }
 }
 
