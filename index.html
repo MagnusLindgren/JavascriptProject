@@ -38,15 +38,23 @@
       </div>
       <!-- härifrån ska kort skapas -->
       <div class="games"> <!-- Parent för status, searchbar, button och cards/card -->
-        <!--<div id="searchCard" class="card">
+        <div id="searchCard" class="card">
             <img id="topImage" src="" alt="" style="width: 12rem; height: 12em; visibility: hidden"  />
-
           <div class="card-info"> 
             <h2 id="heroName" class="heroName"></h2>
             <p id="informationHero" class="informationHero">          
             </p>
           </div>
-        </div>-->
+        </div>
+        <div id="SearchComicCard" class="cards">
+          <div class="card"> <!-- Child till "cards"-->
+            <img id="comicImg" src="" alt="" style="width: 12rem; height: 12em; visibility: hidden"  />
+            <div class="card-info"> <!--Informations kort-->
+              <h2 id="comicName" class="comicName">name</h2>
+              <p id="informationComicHero" class="informationComicHero">Description:</p>
+            </div>
+          </div>
+        </div>
 
       </div>
     </section>
@@ -59,8 +67,8 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script> 
-    <script type="module" src="js/main.js"></script>
+    <!--<script type="module" src="js/main.js"></script>-->
     <!--<script src="js/test.js"></script>-->
-    <!--<script src="js/marcus.js"></script>-->
+    <script src="js/marcus.js"></script>
   </body>
 </html>
