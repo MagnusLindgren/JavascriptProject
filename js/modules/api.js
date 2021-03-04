@@ -1,4 +1,4 @@
-export { findHero };
+export { findHero }; // Exportera funktion
 //import { query } from '../main.js';
 import { createCard } from './content.js';
 
@@ -29,16 +29,14 @@ function testFunction() {
 console.log(searchTerm, "från main.js");
 }*/
 
-function findHero(query) {
+function findHero(query) { // Funktion för att hämta hjälte med information och bild.
 
-    const website = 'https://gateway.marvel.com/v1/public/characters';
+    const website = 'https://gateway.marvel.com/v1/public/characters'; // Gateway för att kunna hämta karaktär ifrån API
 
-    console.log("do hash");
     const ts = new Date().getTime();
     const hash = CryptoJS.MD5(ts + privateKey + publicKey).toString();
-    console.log(hash);
     const url = website;
-    $.getJSON(url, {
+    $.getJSON(url, { //JSON query. 
         ts: ts,
         apikey: publicKey,
         hash: hash,
@@ -46,20 +44,19 @@ function findHero(query) {
     })
         .done(function (response) {
             console.log(response);            
-            if (response.data.results[0] != null) {
+            if (response.data.results[0] != null) { // Om input inte är lika med 0 / " " så skriv ut resultat.
                 console.log("WE HAVE A RESULT!!!");
                 console.log(response);
                 createCard(response);
-            } else {
-                console.log("we do not have a result :(((((((((((((((((((((")
+            } else { // Annars göm bild och text och skriv ut ett meddelande att hjälten inte finns
                 const card = document.createElement('div');
                 document.querySelector('.games').append(card);
                 card.setAttribute('class', 'card');
-                card.innerText = 'NOT FOUND FFS - Search better!';
+                card.innerText = 'Hero not found, try again.';
             }
         })
         .fail(function (err) {
-            // the error codes are listed on the dev site
+            // error kod som finns loggade på utvecklarens hemsidan för API:N
             console.log(err);
         });
 }
