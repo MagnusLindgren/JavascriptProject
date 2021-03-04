@@ -191,16 +191,16 @@ p {
 
 .cardInfo a {
   color: #fbca03;
-  font-size: small;
+  font-size: 14px;
 }
 
 .cardInfo a:visited {
   color: #fbca03;
-  font-size: larger;
+  font-size: 14px;
   text-shadow: 1px 1px #ff0000;
 }
 .informationHero{
-    font-size: larger;
+    font-size: 14px;
     font-weight: bold;
 }
 
