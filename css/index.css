@@ -96,7 +96,8 @@ a:visited {
     align-items: center;
     justify-content: space-evenly;
     text-align: center;
-    min-width: 15rem;
+    min-width: 300px;
+    max-width: 300px;
     padding: 1rem;
     background: linear-gradient(
         to right bottom,

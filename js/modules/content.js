@@ -1,7 +1,6 @@
 export { createCard };
 // import { result } from './api.js';
 
-// Förberett för skapelse. Behöver hämtningen klar innan slutförelse.
 function createCard(result) {
     // Grundstenen
     const main = document.querySelector('.games');
@@ -36,7 +35,7 @@ function createCard(result) {
     cardInfo.classList.add('cardInfo');
     card.classList.add('card');
 };
-/*
+/* Orginal urklipp hämtat från findHero
 function createCard(result) {
     document.getElementById('searchCard').style.visibility = 'visible';
     document.getElementById('heroName').textContent = result.name;
