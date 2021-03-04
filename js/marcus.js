@@ -15,7 +15,7 @@ document.getElementById('button').addEventListener('click', function (event) {
     document.getElementById('comicName').textContent = "Comic: ";
 
     findHero(searchButton.value, event); 
-    iterateComics(searchButton.value, event); 
+    //iterateComics(searchButton.value, event); 
     document.getElementById('searchbar').textContent = "";
 });
 
