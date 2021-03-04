@@ -19,7 +19,7 @@ body {
 }
 
 h1{
-    color: #FBCA03;
+    color: #000000;
     font-weight: 600;
     font-size: 3rem;
     opacity: 0.8;
@@ -33,12 +33,13 @@ h2{
 h2, 
 p {
     color: #000000;
-    font-weight: 500;
+    font-weight: bold;
 }
 
 h4 {
-    color: #FBCA03;
+    color: #000000;
     text-shadow: 1px 1px #ff0000;
+    font-size: larger;
 }
 
 a {
@@ -116,7 +117,8 @@ a:visited {
 
 .pro, h2
 {
-    color: #FBCA03;
+    color: #000000;
+    font-weight: bold;
 }
 
 /* GAMES */
@@ -198,21 +200,25 @@ a:visited {
 }
 
 .cardInfo, p{
-    color: #FBCA03;
+    color: #000000;
     font-size: larger;
     text-shadow: 1px 1px #ff0000;
 }
 
 .cardInfo a{
-    color: #FBCA03;
+    color: #000000;
     font-size: larger;
     text-shadow: 1px 1px #ff0000;
 }
 
 .cardInfo a:visited{
-    color: #FBCA03;
+    color: #000000;
     font-size: larger;
     text-shadow: 1px 1px #ff0000;
+}
+.informationHero{
+    font-size: larger;
+    font-weight: bold;
 }
 
 footer {
